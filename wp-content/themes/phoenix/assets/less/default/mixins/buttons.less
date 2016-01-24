@@ -1,0 +1,425 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  &.btn-style-outlined{
+    color: @background;
+  }
+  //.open > .dropdown-toggle& 
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+  {
+    color: @color;
+    background-color: darken(@background, 10%);
+    border-color: darken(@border, 10%);
+    &.btn-style-outlined{
+      color:darken(@border, 10%);
+    }
+    &.btn-style-3d {
+      .box-shadow(0 5px 0 darken(@border, 12%));
+    }
+  }
+  //.open > .dropdown-toggle& 
+  &:active,
+  &.active
+  {
+    background-image: none;
+  }
+  // &.disabled,
+  // &[disabled]{
+  //   &,
+  //   &:hover,
+  //   &:focus,
+  //   &:active,
+  //   &.active {
+  //     background-color: @background;
+  //         border-color: @border;
+  //   }
+  // }
+  &.btn-style-3d {
+    .box-shadow(0 5px 0 @border);
+  }
+
+}
+.button-effect(@btn-perfix; @color; @background; @border) {
+  @{btn-perfix}.btn-effect-{
+    &border-fade{
+      border-color: transparent;
+      box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      -moz-box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      .transition-duration(0.3s);
+      .transition-property(box-shadow);
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        background-color: @background;
+        box-shadow: 0 0 0 2px darken(@border, 12%) inset, 0 0 1px rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0 0 0 2px darken(@border, 12%) inset, 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 0 0 0 2px darken(@border, 12%) inset, 0 0 1px rgba(0, 0, 0, 0);
+      } 
+    }
+    &border-hollow{
+      border-color: transparent;
+      box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      -moz-box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: 0 0 0 2px @background inset, 0 0 1px rgba(0, 0, 0, 0);
+      .transition-duration(0.3s);
+      .transition-property(background);
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @background;
+        background-color: transparent;
+      }
+    }
+    &border-trim{
+      position: relative;
+      &:before{
+        border: 2px solid white;
+        bottom: 2px;
+        content: "";
+        left: 2px;
+        .opacity(0);
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        .transition-duration(0.3s);
+        .transition-property(opacity);
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        &:before{
+          .opacity(1);
+        }
+      }
+    }
+    &border-outline-outward{
+      position: relative;
+      border-color: transparent;
+      &:before{
+        border: 2px solid @background;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .transition-duration(0.3s);
+        transition-property: top, right, bottom, left;
+        -webkit-transition-property: top, right, bottom, left;
+        -moz-transition-property: top, right, bottom, left;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        &:before{
+          bottom: -6px;
+          left: -6px;
+          right: -6px;
+          top: -6px;
+        }
+      }
+    }
+    &border-outline-inward{
+      position: relative;
+      border-color: transparent;
+      &:before{
+        border: 2px solid @background;
+        bottom: -12px;
+        content: "";
+        left: -12px;
+        .opacity(0);
+        pointer-events: none;
+        position: absolute;
+        right: -12px;
+        top: -12px;
+        .transition-duration(0.3s);
+        transition-property: top, right, bottom, left;
+        -webkit-transition-property: top, right, bottom, left;
+        -moz-transition-property: top, right, bottom, left;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        &:before{
+          bottom: -6px;
+          left: -6px;
+          right: -6px;
+          top: -6px;
+          .opacity(1);
+        }
+      }
+    }
+    &border-round-corners{
+      .transition-duration(0.3s);
+      .transition-property(border-radius);
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        .border-radius(2em);
+      }
+    }
+    &bg-darken{
+      //default
+    }
+    &bg-fade-in{
+      background: transparent;
+      .transition-duration(0.3s);
+      .transition-property(background-color);
+      color: @background;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        background-color:@background;
+        color: @color;
+      }
+    }
+    &bg-fade-out{
+      background-color:@background;
+      .transition-duration(0.3s);
+      .transition-property(background-color);
+      color: @color;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        background: transparent;
+        color: @background;
+      }
+    }
+    &bg-top{
+      position: relative;
+      background: transparent;
+      color: @background;
+      .transition-duration(0.3s);
+      .transition-property(color);
+      &:after{
+        content: "";
+        position: absolute;
+        .transition-duration(0.3s);
+        .transition-property(height);
+        z-index: 1;
+        background: none repeat scroll 0 0 @background;
+        height: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @color;
+        &:after{
+          height: 100%;
+        }
+      }
+    }
+    &bg-right{
+      position: relative;
+      background: transparent;
+      color: @background;
+      .transition-duration(0.3s);
+      .transition-property(color);
+      &:after{
+        content: "";
+        position: absolute;
+        .transition-duration(0.3s);
+        .transition-property(width);
+        z-index: 1;
+        background: none repeat scroll 0 0 @background;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @color !important;
+        &:after{
+          width: 100%;
+        }
+      }
+    }
+    &bg-center{
+      position: relative;
+      background: transparent;
+      color: @background;
+      .transition-duration(0.3s);
+      .transition-property(color);
+      &:after{
+        content: "";
+        position: absolute;
+        .transition-duration(0.3s);
+        .transition-property(all);
+        z-index: 1;
+        background: none repeat scroll 0 0 @background;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        .translate(-50%,-50%);
+        .opacity(0);
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @color !important;
+        &:after{
+          width: 100%; 
+          left: 0;
+          top: 0;
+          .translate(0,0);
+          .opacity(1);
+        }
+      }
+    }
+    &bg-skew-center{
+      position: relative;
+      background: transparent;
+      color: @background;
+      overflow: hidden;
+      .transition-duration(0.3s);
+      .transition-property(color);
+      &:after{
+        content: "";
+        position: absolute;
+        .transition-duration(0.3s);
+        .transition-property(all);
+        z-index: 1;
+        background: none repeat scroll 0 0 @background;
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        .opacity(0);
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @color !important;
+        &:after{
+          height: 260%;
+          .opacity(1);
+        }
+      }
+    }
+    &bg-horizontal-center{
+      position: relative;
+      background: transparent;
+      color: @background;
+      .transition-duration(0.3s);
+      .transition-property(color);
+      &:after{
+        content: "";
+        position: absolute;
+        .transition-duration(0.3s);
+        .transition-property(all);
+        z-index: 1;
+        background: none repeat scroll 0 0 @background;
+        height: 0%;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        .translate(-50%,-50%);
+        .opacity(0);
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+        color: @color !important;
+        &:after{
+          height: 100%; 
+          left: 0;
+          top: 0;
+          .translate(0,0);
+          .opacity(1);
+        }
+      }
+    }
+    &icon-slide-in{
+      position: relative;
+      padding-right: 3em;
+      padding-left: 3em;
+      i{
+        position: absolute;
+        .transition(all 0.2s ease-in-out );
+        .opacity(0);
+        line-height: inherit;
+        margin-left: 0;
+      }
+      span{
+        .transition(all 0.2s ease-in-out );
+        position: relative;
+         left: 0; 
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+         i{
+            margin-left: 5px;
+            .opacity(1);
+         }
+         span{
+          left: -0.5em;
+         }
+      }
+    }
+    &click-state{
+      position: relative;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active{
+         top: 2px;
+         .box-shadow(0 2px 0 darken(@border,10%));
+      }
+    }
+  }
+}
+.btn-outline(){
+  background: rgba(0, 0, 0, 0) !important;
+  border-width: 2px !important; 
+  text-transform: uppercase;
+  font-weight: @headings-font-weight;
+  color: @brand-primary;
+  &:hover{
+    background: @brand-primary !important;
+    color: #fff !important;
+  }
+}
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+  padding: @padding-vertical + 0.1 @padding-horizontal + 0.2 ;
+  font-size: @font-size;
+  line-height: 1.35;
+  //font-weight: @headings-font-weight; 
+  .transition(~"background-color 0.3s, border-color 0.3s, text-color 0.3s");
+  .border-radius(@border-radius);
+  // letter-spacing: 0.5px;
+}

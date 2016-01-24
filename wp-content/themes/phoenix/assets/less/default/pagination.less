@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+12.0 - Pagination
+--------------------------------------------------------------*/
+.paginate{
+	&:extend(.clearfix all);
+	display: block;
+	margin-top: @line-height-computed;
+	padding: 0 0 @padding-large-vertical 0;
+	.container-full &{
+		padding-left: @grid-gutter-width;
+		padding-right: @grid-gutter-width;
+	}
+	.paginate_links{
+		display: table;
+		margin: 0 auto;
+		float: right;
+		.page-numbers{
+			padding:0;
+			height: 45px;
+			line-height: 41px;
+			width: 45px;
+			text-align: center;
+			border:2px solid @border-color-primary;
+			display: inline-block;
+			float: left;
+			margin: 0 ((5px / @font-size-root) + @font-unit) 0 0;
+			color: @text-color;
+			font-size: 1.2em;
+			.border-radius(@border-radius-small);
+			&:last-child{
+				margin: 0;
+			}
+			&.current{
+				background: @background-color-primary;
+				color: #fff;
+			}
+			&.prev,
+			&.next{
+				font-size: 1.5em;
+			}
+		}
+		a.page-numbers{
+			&:hover,
+			&:focus{
+				color: #fff;
+				background: @border-color-primary;
+			}
+		}
+		.pagination-meta{
+			float: left;
+			color: @text-color;
+			border-color: transparent;
+			margin-right: 10px;
+			height: 45px;
+			line-height: 45px;
+		}
+		@media (max-width: @screen-xs-max) {
+			float: none;
+			.pagination-meta{
+				display: none;
+			}
+		}
+	}
+}
