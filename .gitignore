@@ -7,7 +7,6 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 uploads/backupbuddy_temp/
 uploads/backupbuddy_backups/
-wp-content/uploads/
 uploads/pb_backupbuddy/
 sitemap.xml
 *.log
