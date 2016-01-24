@@ -14,3 +14,28 @@ Tags: two-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout,
 /*
 Adding your own custom CSS rules.
 */
+
+
+
+/*
+remove background color on item count
+*/
+.count {
+	background-color: rgba(248,215,172,0.0);
+}
+
+/*
+product category buttons
+*/
+.woocommerce .product-category h3:hover {
+	background-color: #ffffff;
+	color: #000;
+	border: 2px solid #fed93e;
+}
+
+/*
+shopping cart icon
+*/
+.minicart-icon span {
+	background: none repeat scroll 0 0 #ffbd55;
+}
