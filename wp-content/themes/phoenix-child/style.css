@@ -31,9 +31,42 @@ product category buttons
 	border: 2px solid #fed93e;
 }
 
+
 /*
 shopping cart icon
 */
 .minicart-icon span {
 	background: none repeat scroll 0 0 #ffbd55;
 }
+
+
+/*
+contact image
+*/
+
+img.phone-img {
+	margin-top: 25px;
+}
+
+.wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-not-valid,
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors {
+    color: #fc6c70;
+    border-color: #fc6c70;
+
+}
+
+
+/*
+hide product categories
+*/
+.woocommerce .product-category h3 {
+	display: none;
+}
+
+.columns-3>ul.products li.product, ul.products.columns-3 li.product, .page-layout-left-sidebar ul.products li.product, .page-layout-right-sidebar ul.products li.product {
+	margin: 25px 2% 2em 0;
+}
+
+
+
