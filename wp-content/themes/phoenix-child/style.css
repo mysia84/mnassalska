@@ -79,5 +79,33 @@ body.home  ul.products>li {
 	border-bottom: 1px solid #000;
 }
 
+/*
+product info
+*/
+.woocommerce ul.products li.product figcaption .shop-loop-product-info {
+	text-align: left
+}
+
+.woocommerce ul.products li.product .price {
+	color: #333;
+}
+
+.woocommerce ul.products li.product .shop-loop-actions .shop-loop-quickview {
+	left: 0px;
+}
+
+.woocommerce ul.products li.product .shop-loop-actions {
+	margin: 0px;
+}
+
+.woocommerce .woocommerce-message:before {
+	color: rgba(0, 0, 0, 0.0);
+}
+
+.woocommerce .woocommerce-message {
+	border-left: 0px;
+}
+
+
 
 
