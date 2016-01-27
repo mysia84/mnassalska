@@ -68,12 +68,14 @@ hide product categories
 	margin: 25px 2% 2em 0;
 } 
 
-
-.woocommerce img {
+/*
+border on home page categories
+*/
+body.home .woocommerce img {
 	padding-bottom: 55px;
 }
 
-ul.products>li {
+body.home  ul.products>li {
 	border-bottom: 1px solid #000;
 }
 
