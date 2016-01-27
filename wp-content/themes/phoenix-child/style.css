@@ -62,10 +62,19 @@ hide product categories
 */
 .woocommerce .product-category h3 {
 	display: none;
-}
+} 
 
 .columns-3>ul.products li.product, ul.products.columns-3 li.product, .page-layout-left-sidebar ul.products li.product, .page-layout-right-sidebar ul.products li.product {
 	margin: 25px 2% 2em 0;
+} 
+
+
+.woocommerce img {
+	padding-bottom: 55px;
+}
+
+ul.products>li {
+	border-bottom: 1px solid #000;
 }
 
 
