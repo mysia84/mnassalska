@@ -15,16 +15,12 @@ Tags: two-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout,
 Adding your own custom CSS rules.
 */
 
-/*
-remove background color on item count
-*/
+/* remove background color on item count */
 .count {
 	background-color: rgba(248,215,172,0.0);
 }
 
-/*
-product category buttons
-*/
+/* product category buttons */
 .woocommerce .product-category h3:hover {
 	background-color: #ffffff;
 	color: #000;
@@ -32,17 +28,13 @@ product category buttons
 }
 
 
-/*
-shopping cart icon
-*/
+/* shopping cart icon */
 .minicart-icon span {
 	background: none repeat scroll 0 0 #ffbd55;
 }
 
 
-/*
-contact image
-*/
+/* contact image */
 
 img.phone-img {
 	margin-top: 25px;
@@ -57,9 +49,7 @@ div.wpcf7-validation-errors {
 }
 
 
-/*
-hide product categories
-*/
+/* hide product categories */
 .woocommerce .product-category h3 {
 	display: none;
 } 
@@ -68,9 +58,7 @@ hide product categories
 	margin: 25px 2% 2em 0;
 } 
 
-/*
-border on home page categories
-*/
+/* border on home page categories */
 body.home .woocommerce img {
 	padding-bottom: 55px;
 }
@@ -79,10 +67,7 @@ body.home  ul.products>li {
 	border-bottom: 1px solid #000;
 }
 
-/*
-product info
-*/
-
+/* product info */
 .woocommerce ul.products li.product .price {
 	color: #333;
 }
@@ -91,9 +76,7 @@ product info
 	left: 0px;
 }
 
-/*
-bug on top of product page list
-*/
+/* bug on top of product page list */
 .woocommerce .woocommerce-message:before {
 	color: rgba(0, 0, 0, 0.0);
 }
@@ -101,6 +84,23 @@ bug on top of product page list
 .woocommerce .woocommerce-message {
 	border-left: 0px;
 }
+
+/*bug on tablet */
+@media (max-width: 991px) and (min-width: 480px) {
+	.woocommerce ul.products>.product-category.last {
+		margin-right: 10px;
+	}
+
+	
+	body.home .woocommerce .columns-3 {
+		background-color: #ff0000;
+	}
+
+}
+
+
+
+
 
 
 
