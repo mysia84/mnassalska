@@ -60,11 +60,16 @@ div.wpcf7-validation-errors {
 
 /* border on home page categories */
 body.home .woocommerce img {
-	padding-bottom: 55px;
+	margin-bottom: 25px;
 }
 
 body.home  ul.products>li {
 	border-bottom: 1px solid #000;
+}
+
+body.home  ul.products>li img:hover {
+	padding: 1px 1px;
+	border: 1px solid #f2f2f2;
 }
 
 /* product info */
@@ -96,6 +101,8 @@ body.home  ul.products>li {
 	}
 
 }
+
+
 
 
 
