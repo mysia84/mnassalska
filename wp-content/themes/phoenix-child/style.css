@@ -29,7 +29,8 @@ Adding your own custom CSS rules.
 
 
 /* shopping cart icon */
-.minicart-icon span {
+.minicart-icon span,
+.cart-icon-mobile span {
 	background: none repeat scroll 0 0 #ffbd55;
 }
 
@@ -117,6 +118,14 @@ body.home  ul.products>li img:hover {
 	line-height: normal;
 	color: #fdd83e;
 	font-size: 1.75em;
+}
+
+.woocommerce #payment .terms {
+    margin-top: 20px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    float: left
 }
 
 .woocommerce form .form-row .required,
