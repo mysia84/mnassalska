@@ -108,6 +108,16 @@ body.home  ul.products>li img:hover {
 	margin-top: 50px;
 }
 
+.woocommerce table.cart a.remove:hover {
+	background-color: #fdd83e !important;
+	font-size: 1.75em;
+}
+
+.woocommerce table.cart a.remove {
+	line-height: normal;
+	color: #fdd83e;
+	font-size: 1.75em;
+}
 
 
 
