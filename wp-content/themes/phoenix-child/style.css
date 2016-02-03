@@ -102,6 +102,12 @@ body.home  ul.products>li img:hover {
 
 }
 
+/*checkout*/
+.woocommerce #payment #place_order {
+	display: block;
+	margin-top: 50px;
+}
+
 
 
 
