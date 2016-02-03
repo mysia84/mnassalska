@@ -67,8 +67,8 @@ body.home  ul.products>li {
 	border-bottom: 1px solid #000;
 }
 
+/*homepage products hover */
 body.home  ul.products>li img:hover {
-	padding: 1px 1px;
 	border: 1px solid #f2f2f2;
 }
 
@@ -117,6 +117,20 @@ body.home  ul.products>li img:hover {
 	line-height: normal;
 	color: #fdd83e;
 	font-size: 1.75em;
+}
+
+.woocommerce form .form-row .required,
+.woocommerce .woocommerce-error:before {
+	color: #fc6c70;
+}
+
+.woocommerce .woocommerce-error {
+	border-left: 3px solid #fc6c70;
+}
+
+/*tabs on product pages */
+.woocommerce .woocommerce-tabs {
+	display: none;
 }
 
 
