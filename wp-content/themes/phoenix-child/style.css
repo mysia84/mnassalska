@@ -54,10 +54,6 @@ div.wpcf7-validation-errors {
 .woocommerce .product-category h3 {
 	display: none;
 } 
-/*
-.columns-3>ul.products li.product, ul.products.columns-3 li.product, .page-layout-left-sidebar ul.products li.product, .page-layout-right-sidebar ul.products li.product {
-	margin: 25px 2% 2em 0;
-} */
 
 /* border on home page categories */
 body.home .woocommerce img {
@@ -127,6 +123,11 @@ body.home  ul.products>li img:hover {
     width: 100%;
     float: left
 }
+@media (max-width: 375px) {
+	.form-flat-radio i, .form-flat-checkbox i {
+		margin-top: -20px;
+	}
+}
 
 .woocommerce form .form-row .required,
 .woocommerce .woocommerce-error:before {
@@ -140,6 +141,11 @@ body.home  ul.products>li img:hover {
 /*tabs on product pages */
 .woocommerce .woocommerce-tabs {
 	display: none;
+}
+
+/*fb tooltip bug */
+.tooltip.top {
+	display: none !important;
 }
 
 
